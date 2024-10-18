@@ -31,6 +31,8 @@ public class TestFamilyTransport {
         Motorcycle motorcycle = new Motorcycle(2, 2);
         family.addVehicle(car);
         family.addVehicle(motorcycle);
+        // isValidVehicleForNumberOfPassengers should return true if the vehicle has enough space for the number of passengers
+        // the first parameter is the id of the vehicle, the second is the number of passengers
         assertEquals(true, family.isValidVehicleForNumberOfPassengers(1, 4));
         assertEquals(false, family.isValidVehicleForNumberOfPassengers(2, 3));
     }
@@ -44,6 +46,8 @@ public class TestFamilyTransport {
         // we assume that a car has 4 doors
         family.addVehicle(1,3);
         family.addVehicle(2,2);
+        assertEquals(1, family.getNumberOfCars());
+        assertEquals(1, family.getNumberOfMotorcycles());        
     }
 
 
